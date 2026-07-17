@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origen - Turnos y Gestión</title>
+    <meta name="description" content="Agendá turnos y gestioná tus trámites en Origen.">
+    
+    <!-- Fonts: Space Grotesk (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Fonts: Satoshi (Fontshare) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    
+    <!-- Fonts: Space Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Type Scale: Precise Type -->
+    <link rel="stylesheet" href="precise%20type/type-scale.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <!-- Icono izquierdo -->
+            <div class="navbar-left">
+                <img src="assets/icons/favicon0.svg" alt="Origen Icon" class="navbar-icon" onerror="this.style.display='none'; this.parentNode.classList.add('no-icon');">
+            </div>
+            
+            <!-- Links centrales/derechos -->
+            <div class="navbar-nav">
+                <div class="nav-links-container">
+                    <a href="#academia">ACADEMIA</a>
+                    <span class="divider"></span>
+                    <a href="#consultorio">CONSULTORIO</a>
+                    <span class="divider"></span>
+                    <a href="#catalogo">CATÁLOGO</a>
+                    <span class="divider"></span>
+                    <a href="#desde-el-origen">CULTIVADORES</a>
+                    <span class="divider"></span>
+                    <a href="#que-hacemos">DESDE EL ORIGEN</a>
+                    <span class="divider"></span>
+                    <a href="#faq">FAQ</a>
+                    <span class="divider"></span>
+                    <a href="#contacto">CONTACTO</a>
+                </div>
+                <div class="nav-menu-btn" id="mobile-menu-btn">
+                    MENU
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero">
+            <!-- Background Image -->
+            <div class="hero-bg-image"></div>
+
+            <!-- Top Text -->
+            <div class="hero-top-text">
+                <h2>RECUPERAR LO NUESTRO</h2>
+                <h1><span class="text-gradient">DESDE EL ORIGEN</span></h1>
+            </div>
+
+            <div class="eyebrow-wrapper container">
+                <div class="landing-eyebrow">
+                    <!-- 4 SVG Icons -->
+                    <a href="#academia" class="eyebrow-link" data-tooltip="ACADEMIA"><img src="assets/icons/5_20.svg" class="eyebrow-icon" onerror="this.style.display='none';"></a>
+                    <a href="#consultorio" class="eyebrow-link" data-tooltip="CONSULTORIO"><img src="assets/icons/2_10.svg" class="eyebrow-icon" onerror="this.style.display='none';"></a>
+                    <a href="#catalogo" class="eyebrow-link" data-tooltip="CATÁLOGO"><img src="assets/icons/1_10.svg" class="eyebrow-icon" onerror="this.style.display='none';"></a>
+                    <a href="#desde-el-origen" class="eyebrow-link" data-tooltip="CULTIVADORES"><img src="assets/icons/3_10.svg" class="eyebrow-icon" onerror="this.style.display='none';"></a>
+                </div>
+
+                <div class="eyebrow-tooltip-container">
+                    <span id="eyebrow-tooltip"></span>
+                </div>
+            </div>
+
+
+            
+
+        </section>
+
+        <!-- QUÉ HACEMOS SECTION -->
+        <section class="qh-section" id="que-hacemos">
+            <!-- Geometric Diamond Grid Background -->
+            <svg class="qh-bg-svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Concentric Diamond 1 -->
+                <polygon points="400,250 550,400 400,550 250,400" class="hex-line" />
+                <!-- Concentric Diamond 2 -->
+                <polygon points="400,120 680,400 400,680 120,400" class="hex-line" />
+                <!-- Concentric Diamond 3 -->
+                <polygon points="400,0 800,400 400,800 0,400" class="hex-line" />
+                
+                <!-- Nodes (Square dots) -->
+                <!-- Diamond 1 Nodes -->
+                <rect x="397" y="247" width="6" height="6" class="hex-node" />
+                <rect x="547" y="397" width="6" height="6" class="hex-node" />
+                <rect x="397" y="547" width="6" height="6" class="hex-node" />
+                <rect x="247" y="397" width="6" height="6" class="hex-node" />
+                
+                <!-- Diamond 2 Nodes -->
+                <rect x="397" y="117" width="6" height="6" class="hex-node" />
+                <rect x="677" y="397" width="6" height="6" class="hex-node" />
+                <rect x="397" y="677" width="6" height="6" class="hex-node" />
+                <rect x="117" y="397" width="6" height="6" class="hex-node" />
+
+                <!-- Diamond 3 Nodes -->
+                <rect x="397" y="-3"  width="6" height="6" class="hex-node" />
+                <rect x="797" y="397" width="6" height="6" class="hex-node" />
+                <rect x="397" y="797" width="6" height="6" class="hex-node" />
+                <rect x="-3"  y="397" width="6" height="6" class="hex-node" />
+            </svg>
+
+            <div class="qh-grid-container container">
+                <p class="qh-eyebrow">Qué hacemos</p>
+                <h1 class="qh-title">Cuatro caminos,<br><span>una misma raíz</span></h1>
+                <div class="qh-grid">
+
+            <!-- PANEL IZQUIERDO -->
+            <div class="qh-media">
+              <div class="qh-media-img-wrap" id="qhImgWrap">
+                <img src="assets/images/foto-academia.jpg"    alt="Academia"     class="is-active" data-key="academia">
+                <img src="assets/images/FILTRO ORIGEN.jpg"     alt="Consultorio"  data-key="consultorio">
+                <img src="assets/images/foto-aceites.png"     alt="Catálogo"     data-key="catalogo">
+                <img src="assets/images/foto-cultivo.jpg" alt="Cultivadores" data-key="cultivadores">
+              </div>
+              <div class="qh-media-footer" id="qhFooter">
+                <span class="qh-media-icon" id="qhFooterIcon"></span>
+                <span class="qh-media-label" id="qhFooterLabel">Academia</span>
+              </div>
+            </div>
+
+            <!-- PANEL DERECHO: ACORDEÓN -->
+            <div class="qh-accordion" id="qhAccordion">
+              <div class="qh-root-line"></div>
+              <div class="qh-root-fill" id="qhRootFill"></div>
+
+              <div class="qh-bar is-open" data-key="academia">
+                <span class="qh-bar-node"></span>
+                <button class="qh-bar-trigger" aria-expanded="true">
+                  <span class="qh-bar-trigger-main">
+                    <span class="qh-bar-num">01</span>
+                    <span>Academia</span>
+                  </span>
+                  <span class="qh-bar-plus"></span>
+                </button>
+                <div class="qh-bar-panel">
+                  <div class="qh-bar-panel-inner">
+                    <p class="qh-bar-desc">Formación práctica en cultivo, del sustrato a la cosecha, dictada por quienes lo hacen todos los días.</p>
+                    <a href="#academia" class="qh-link-simple">
+                      <span>CONOCER MÁS</span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3.333 8h9.334M8 3.333L12.667 8 8 12.667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="qh-bar" data-key="consultorio">
+                <span class="qh-bar-node"></span>
+                <button class="qh-bar-trigger" aria-expanded="false">
+                  <span class="qh-bar-trigger-main">
+                    <span class="qh-bar-num">02</span>
+                    <span>Consultorio</span>
+                  </span>
+                  <span class="qh-bar-plus"></span>
+                </button>
+                <div class="qh-bar-panel">
+                  <div class="qh-bar-panel-inner">
+                    <p class="qh-bar-desc">Asesoramiento personalizado para resolver problemas puntuales de tu cultivo, con seguimiento cercano.</p>
+                    <a href="#consultorio" class="qh-link-simple">
+                      <span>SOLICITAR TURNO</span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3.333 8h9.334M8 3.333L12.667 8 8 12.667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="qh-bar" data-key="catalogo">
+                <span class="qh-bar-node"></span>
+                <button class="qh-bar-trigger" aria-expanded="false">
+                  <span class="qh-bar-trigger-main">
+                    <span class="qh-bar-num">03</span>
+                    <span>Catálogo</span>
+                  </span>
+                  <span class="qh-bar-plus"></span>
+                </button>
+                <div class="qh-bar-panel">
+                  <div class="qh-bar-panel-inner">
+                    <p class="qh-bar-desc">Insumos y genética seleccionada, curados con el mismo criterio con el que enseñamos.</p>
+                    <a href="#catalogo" class="qh-link-simple">
+                      <span>CONOCER MÁS</span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3.333 8h9.334M8 3.333L12.667 8 8 12.667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="qh-bar" data-key="cultivadores">
+                <span class="qh-bar-node"></span>
+                <button class="qh-bar-trigger" aria-expanded="false">
+                  <span class="qh-bar-trigger-main">
+                    <span class="qh-bar-num">04</span>
+                    <span>Cultivadores</span>
+                  </span>
+                  <span class="qh-bar-plus"></span>
+                </button>
+                <div class="qh-bar-panel">
+                  <div class="qh-bar-panel-inner">
+                    <p class="qh-bar-desc">Una comunidad que comparte experiencia, resultados y errores para crecer en conjunto.</p>
+                    <a href="#desde-el-origen" class="qh-link-simple">
+                      <span>QUIERO SUMARME</span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3.333 8h9.334M8 3.333L12.667 8 8 12.667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        </section>
+
+
+
+               <!-- ACADEMIA HERO SECTION -->
+        <section id="academia" class="academia-section-dark">
+            <!-- Geometric Pentagon Grid Background -->
+            <svg class="academia-bg-svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Concentric Pentagon 1 -->
+                <polygon points="400,250 543,354 488,521 312,521 257,354" class="hex-line" />
+                <!-- Concentric Pentagon 2 -->
+                <polygon points="400,120 666,314 565,627 235,627 134,314" class="hex-line" />
+                <!-- Concentric Pentagon 3 -->
+                <polygon points="400,0 780,276 635,724 165,724 20,276" class="hex-line" />
+                
+                <!-- Nodes (Square dots) -->
+                <!-- Pent 1 Nodes -->
+                <rect x="397" y="247" width="6" height="6" class="hex-node" />
+                <rect x="540" y="351" width="6" height="6" class="hex-node" />
+                <rect x="485" y="518" width="6" height="6" class="hex-node" />
+                <rect x="309" y="518" width="6" height="6" class="hex-node" />
+                <rect x="254" y="351" width="6" height="6" class="hex-node" />
+                
+                <!-- Pent 2 Nodes -->
+                <rect x="397" y="117" width="6" height="6" class="hex-node" />
+                <rect x="663" y="311" width="6" height="6" class="hex-node" />
+                <rect x="562" y="624" width="6" height="6" class="hex-node" />
+                <rect x="232" y="624" width="6" height="6" class="hex-node" />
+                <rect x="131" y="311" width="6" height="6" class="hex-node" />
+
+                <!-- Pent 3 Nodes -->
+                <rect x="397" y="-3"  width="6" height="6" class="hex-node" />
+                <rect x="777" y="273" width="6" height="6" class="hex-node" />
+                <rect x="632" y="721" width="6" height="6" class="hex-node" />
+                <rect x="162" y="721" width="6" height="6" class="hex-node" />
+                <rect x="17"  y="273" width="6" height="6" class="hex-node" />
+            </svg>
+
+            <!-- Banner de ancho completo (100% viewport) -->
+            <div class="academia-banner">
+                <div class="academia-banner-media-wrapper">
+                    <div class="academia-banner-media-container">
+                        <img src="assets/images/entrega-certificados.jpg" alt="Entrega de certificados Academia Origen" class="academia-banner-img">
+                        <div class="academia-banner-overlay top"></div>
+                        <div class="academia-banner-overlay bottom"></div>
+                    </div>
+                </div>
+                
+                <!-- Contenedor único con los títulos centrados -->
+                <div class="container academia-banner-content">
+                    <div class="academia-banner-header" style="text-align: center; margin-bottom: 0; width: 100%;">
+                        <div class="academia-eyebrow">ACADEMIA ORIGEN</div>
+                        <h2 class="academia-title">El conocimiento crece <span>EN RED</span>.</h2>
+                    </div>
+                </div>
+
+                <!-- Contenedor inferior con la descripción centrado -->
+                <div class="container academia-banner-bottom-content">
+                    <p class="p1 banner-desc">
+                        <span>Más de 700 personas</span> ya pasaron por nuestros <span>talleres en el HIGA San José</span>, de entre 18 y 80 años, la mayoría de Pergamino y alrededores. Muchos llegaron sin saber qué era el <span>REPROCANN</span> y se fueron con las herramientas para empezar. Cada edición suma un nodo nuevo a la red: <span>sumate vos también</span>.
+                    </p>
+                    <div class="academia-banner-logos">
+                        <img src="assets/icons/logo-origen0.svg" alt="Logo Origen" class="banner-logo-icon">
+                        <img src="assets/icons/logo-higa0.svg" alt="Logo HIGA San José" class="banner-logo-icon">
+                        <img src="assets/icons/logo-MSPAB0.svg" alt="Logo MSPBA" class="banner-logo-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ACADEMIA NETWORK ANIMATION SECTION -->
+        <section class="academia-network-section">
+            <!-- Geometric Pentagon Grid Background - Left (Mirrored) -->
+            <svg class="network-bg-svg network-bg-svg-left" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Concentric Pentagon 1 -->
+                <polygon points="400,250 543,354 488,521 312,521 257,354" class="hex-line" />
+                <!-- Concentric Pentagon 2 -->
+                <polygon points="400,120 666,314 565,627 235,627 134,314" class="hex-line" />
+                <!-- Concentric Pentagon 3 -->
+                <polygon points="400,0 780,276 635,724 165,724 20,276" class="hex-line" />
+                
+                <!-- Nodes (Square dots) -->
+                <!-- Pent 1 Nodes -->
+                <rect x="397" y="247" width="6" height="6" class="hex-node" />
+                <rect x="540" y="351" width="6" height="6" class="hex-node" />
+                <rect x="485" y="518" width="6" height="6" class="hex-node" />
+                <rect x="309" y="518" width="6" height="6" class="hex-node" />
+                <rect x="254" y="351" width="6" height="6" class="hex-node" />
+                
+                <!-- Pent 2 Nodes -->
+                <rect x="397" y="117" width="6" height="6" class="hex-node" />
+                <rect x="663" y="311" width="6" height="6" class="hex-node" />
+                <rect x="562" y="624" width="6" height="6" class="hex-node" />
+                <rect x="232" y="624" width="6" height="6" class="hex-node" />
+                <rect x="131" y="311" width="6" height="6" class="hex-node" />
+
+                <!-- Pent 3 Nodes -->
+                <rect x="397" y="-3"  width="6" height="6" class="hex-node" />
+                <rect x="777" y="273" width="6" height="6" class="hex-node" />
+                <rect x="632" y="721" width="6" height="6" class="hex-node" />
+                <rect x="162" y="721" width="6" height="6" class="hex-node" />
+                <rect x="17"  y="273" width="6" height="6" class="hex-node" />
+            </svg>
+
+            <!-- Geometric Pentagon Grid Background - Right -->
+            <svg class="network-bg-svg network-bg-svg-right" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Concentric Pentagon 1 -->
+                <polygon points="400,250 543,354 488,521 312,521 257,354" class="hex-line" />
+                <!-- Concentric Pentagon 2 -->
+                <polygon points="400,120 666,314 565,627 235,627 134,314" class="hex-line" />
+                <!-- Concentric Pentagon 3 -->
+                <polygon points="400,0 780,276 635,724 165,724 20,276" class="hex-line" />
+                
+                <!-- Nodes (Square dots) -->
+                <!-- Pent 1 Nodes -->
+                <rect x="397" y="247" width="6" height="6" class="hex-node" />
+                <rect x="540" y="351" width="6" height="6" class="hex-node" />
+                <rect x="485" y="518" width="6" height="6" class="hex-node" />
+                <rect x="309" y="518" width="6" height="6" class="hex-node" />
+                <rect x="254" y="351" width="6" height="6" class="hex-node" />
+                
+                <!-- Pent 2 Nodes -->
+                <rect x="397" y="117" width="6" height="6" class="hex-node" />
+                <rect x="663" y="311" width="6" height="6" class="hex-node" />
+                <rect x="562" y="624" width="6" height="6" class="hex-node" />
+                <rect x="232" y="624" width="6" height="6" class="hex-node" />
+                <rect x="131" y="311" width="6" height="6" class="hex-node" />
+
+                <!-- Pent 3 Nodes -->
+                <rect x="397" y="-3"  width="6" height="6" class="hex-node" />
+                <rect x="777" y="273" width="6" height="6" class="hex-node" />
+                <rect x="632" y="721" width="6" height="6" class="hex-node" />
+                <rect x="162" y="721" width="6" height="6" class="hex-node" />
+                <rect x="17"  y="273" width="6" height="6" class="hex-node" />
+            </svg>
+
+            <div class="network-container">
+                <!-- Brillo de seguimiento de cursor -->
+                <div class="network-mouse-glow"></div>
+
+                <svg class="network-lines">
+                    <defs>
+                        <filter id="glow-lines" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="1.5" result="blur" />
+                            <feComponentTransfer in="blur" result="brightBlur">
+                                <feFuncA type="linear" slope="1.5"/>
+                            </feComponentTransfer>
+                            <feMerge>
+                                <feMergeNode in="brightBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                </svg>
+
+                <div class="network-node network-node-center"></div>
+
+                <div class="network-node network-node-small network-node-1"></div>
+                <div class="network-node network-node-small network-node-2"></div>
+                <div class="network-node network-node-small network-node-3"></div>
+                <div class="network-node network-node-small network-node-4"></div>
+                <div class="network-node network-node-small network-node-5"></div>
+
+                <div class="network-stat network-stat-1">
+                    <div class="network-stat-inner">
+                        <div class="network-stat-value">+700</div>
+                        <div class="network-stat-label">personas pasaron por los talleres</div>
+                    </div>
+                </div>
+
+                <div class="network-stat network-stat-2">
+                    <div class="network-stat-inner">
+                        <div class="network-stat-value">18–80</div>
+                        <div class="network-stat-label">años, el rango de edad de los asistentes</div>
+                    </div>
+                </div>
+
+                <div class="network-stat network-stat-3">
+                    <div class="network-stat-inner">
+                        <div class="network-stat-value">80%</div>
+                        <div class="network-stat-label">de la ciudad de Pergamino, el resto de los alrededores</div>
+                    </div>
+                </div>
+
+                <div class="network-stat network-stat-4">
+                    <div class="network-stat-inner">
+                        <div class="network-stat-value">75%</div>
+                        <div class="network-stat-label">desconocía o nunca había iniciado su trámite de REPROCANN</div>
+                    </div>
+                </div>
+
+                <div class="network-stat network-stat-5">
+                    <div class="network-stat-inner">
+                        <div class="network-stat-value">30%</div>
+                        <div class="network-stat-label">ya utilizaba cannabis de forma terapéutica</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACADEMIA LEVELS SECTION -->
+        <section class="academia-levels-section">
+            <div class="container">
+                <div class="academia-grid">
+                    <!-- Nivel 1 -->
+                    <article class="academia-card academia-card-highlight">
+                        <span class="level-eyebrow">NIVEL 1</span>
+                        <h3>FUNDAMENTOS</h3>
+                        <p class="p2 level-desc">El punto de partida para pacientes, familias y cualquier persona que quiera acercarse al cannabis medicinal con información real.</p>
+                        
+                        <!-- Timeline encuentros -->
+                        <div class="level-timeline">
+                            <span class="timeline-dot">1</span>
+                            <span class="timeline-line"></span>
+                            <span class="timeline-dot">2</span>
+                            <span class="timeline-line"></span>
+                            <span class="timeline-dot">3</span>
+                            <span class="timeline-line"></span>
+                            <span class="timeline-dot">4</span>
+                            <span class="timeline-text">4 encuentros</span>
+                        </div>
+                        
+                        <div class="level-modules-title">3 MÓDULOS</div>
+                        <ul class="level-modules-list">
+                            <li><span class="module-num">A</span> Usos terapéuticos</li>
+                            <li><span class="module-num">B</span> Autocultivo</li>
+                            <li><span class="module-num">C</span> Producción de extractos</li>
+                        </ul>
+                        
+                        <div class="level-location-badge">📍 Presencial • HIGA San José</div>
+                        
+                        <hr class="level-divider">
+                        
+                        <ul class="level-features">
+                            <li><span class="feature-icon">📖</span> Se entrega material de estudio</li>
+                            <li><span class="feature-icon">💬</span> Al finalizar, invitación a un grupo de WhatsApp con el resto de los participantes para intercambiar información y tips de cultivo</li>
+                        </ul>
+                        
+                        <a href="#inscripcion-nivel1" class="btn-primary level-btn" style="text-decoration: none;">QUIERO INSCRIBIRME</a>
+                    </article>
+                    
+                    <!-- Nivel 2 -->
+                    <article class="academia-card academia-card-locked">
+                        <span class="level-eyebrow">NIVEL 2</span>
+                        <h3>PROFUNDIZACIÓN</h3>
+                        <p class="p2 level-desc">Amplía lo aprendido en el Nivel 1 y va un paso más allá del autocuidado: manipular cannabis con criterio, producir medicina de calidad y, con el tiempo, sumarse como nodo activo de Red ORIGEN — incluso aportando al Consultorio Cannábico del HIGA San José a través de Cultivadores Solidarios.</p>
+                        
+                        <div class="level-location-badge locked-dim">📍 Presencial • HIGA San José</div>
+                        
+                        <hr class="level-divider">
+                        
+                        <p class="p3 fw-600 locked-text">🔒 Disponible al completar el Nivel 1</p>
+                        
+                        <button type="button" class="btn-secondary level-btn btn-disabled" disabled aria-disabled="true">SOLO PARA QUIENES REALIZARON EL NIVEL 1</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="consultorio" class="consultorio-section">
+            <div class="container">
+                <div class="consultorio-header">
+                    <h1>Consultorio</h1>
+                    <p class="p2 fw-500 consultorio-subtitle">Distintos espacios de atención según lo que necesites.</p>
+                </div>
+
+                <div class="consultorio-grid">
+                    <!-- Consultorio Médico -->
+                    <article class="consultorio-card">
+                        <span class="card-icon" aria-hidden="true">
+                            <img src="assets/icons/doctor-health-medical-stethoscope-svgrepo-com.svg" alt="Consultorio Médico" class="consultorio-icon-svg">
+                        </span>
+                        <h3>Consultorio Médico</h3>
+                        <p class="p2">Atención médica general para toda la comunidad.</p>
+                        <a href="#turno-medico" class="btn-primary card-btn" style="text-decoration: none;">AGENDAR TURNO</a>
+                    </article>
+
+                    <!-- Consultorio Veterinario -->
+                    <article class="consultorio-card">
+                        <span class="card-icon" aria-hidden="true">
+                            <img src="assets/icons/animal-svgrepo-com.svg" alt="Consultorio Veterinario" class="consultorio-icon-svg">
+                        </span>
+                        <h3>Consultorio Veterinario</h3>
+                        <p class="p2">Atención veterinaria para el cuidado de tus mascotas.</p>
+                        <a href="#turno-veterinario" class="btn-primary card-btn" style="text-decoration: none;">AGENDAR TURNO</a>
+                    </article>
+
+                    <!-- Gestión REPROCANN -->
+                    <article class="consultorio-card">
+                        <span class="card-icon" aria-hidden="true">
+                            <img src="assets/icons/form-svgrepo-com.svg" alt="Gestión REPROCANN" class="consultorio-icon-svg">
+                        </span>
+                        <h3>Gestión REPROCANN</h3>
+                        <p class="p2">Acompañamiento para tramitar y gestionar tu inscripción al REPROCANN.</p>
+                        <a href="#consulta-reprocann" class="btn-primary card-btn" style="text-decoration: none;">CONSULTAR</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PROFESIONALES -->
+        <section id="profesionales" class="profesionales-section">
+            <div class="container">
+                <div class="profesional-card">
+                    <!-- Left 1/3: Image -->
+                    <div class="profesional-img-container">
+                        <img src="assets/images/profesional%201.png" alt="Dra. Florencia Ferrari" class="profesional-img">
+                        <div class="profesional-img-overlay"></div>
+                    </div>
+                    <!-- Right 2/3: Text Details -->
+                    <div class="profesional-info">
+                        <div class="profesional-header">
+                            <span class="profesional-eyebrow">Médica Endocannabinóloga</span>
+                            <h3 class="profesional-name">DRA. FLORENCIA FERRARI</h3>
+                            <span class="profesional-matricula">MP 64.617</span>
+                        </div>
+                        <p class="profesional-desc">
+                            Florencia Ferrari es psiquiatra infantil y referente del Espacio de Cannabis Terapéutico del Hospital Interzonal General de Agudos San José (HIGA), donde coordina el consultorio de cannabis medicinal, en funcionamient... <a href="#contacto" class="seguir-leyendo">SEGUIR LEYENDO&rarr;</a>
+                        </p>
+                        <div class="profesional-tags">
+                            <div class="profesional-tag">
+                                <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                                <span>PROFESIONAL REPROCANN</span>
+                            </div>
+                            <div class="profesional-tag">
+                                <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                    <path d="M12 6a3 3 0 0 1 3 3"></path>
+                                    <path d="M12 9h.01"></path>
+                                </svg>
+                                <span>TELEMEDICINA</span>
+                            </div>
+                            <div class="profesional-tag">
+                                <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 9h6M12 6v6"></path>
+                                </svg>
+                                <span>HIGA SAN JOSÉ - PERGAMINO</span>
+                            </div>
+                        </div>
+                        <div class="profesional-cta-container">
+                            <a href="#contacto" class="btn-primary profesional-btn">SOLICITAR TURNO</a>
+                            <span class="cta-subtext">Completando el formulario</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nuevas variantes de tarjeta de perfil (según el diseño solicitado) -->
+                <div class="profile-cards-container">
+                    
+                    <div class="profile-card-wrapper">
+                        <p class="lab">Variante vertical</p>
+                        <article class="profile-card card-vertical">
+                            <div class="pc-photo">
+                                <img src="assets/images/profesional%201.png" alt="Dra. Florencia Ferrari">
+                            </div>
+                            <div class="pc-body">
+                                <p class="pc-eyebrow">Médica Endocannabinóloga</p>
+                                <h3 class="pc-name">Dra. Florencia Ferrari</h3>
+                                <p class="pc-mp">MP 64.617</p>
+                                <p class="pc-bio">
+                                    Florencia Ferrari es psiquiatra infantil y referente del Espacio de Cannabis Terapéutico del Hospital Interzonal General de Agudos San José (HIGA), donde coordina el consultorio de cannabis medicinal, en funcionamient... <a href="#contacto">seguir leyendo →</a>
+                                </p>
+                                <div class="pc-tags">
+                                    <span class="pc-tag">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+                                        Profesional REPROCANN
+                                    </span>
+                                    <span class="pc-tag">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+                                        Telemedicina
+                                    </span>
+                                    <span class="pc-tag">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+                                        HIGA San José · Pergamino
+                                    </span>
+                                </div>
+                                <div class="pc-actions">
+                                    <a href="#contacto" class="btn-cta">Solicitar turno</a>
+                                    <span class="pc-note">Completando el formulario</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="profile-card-wrapper">
+                        <p class="lab">Variante horizontal</p>
+                        <article class="profile-card card-horizontal">
+                            <div class="pc-photo">
+                                <img src="assets/images/profesional%201.png" alt="Dra. Florencia Ferrari">
+                            </div>
+                            <div class="pc-body">
+                                <p class="pc-eyebrow">Médica Endocannabinóloga</p>
+                                <h3 class="pc-name">Dra. Florencia Ferrari</h3>
+                                <p class="pc-mp">MP 64.617</p>
+                                <p class="pc-bio">
+                                    Florencia Ferrari es psiquiatra infantil y referente del Espacio de Cannabis Terapéutico del Hospital Interzonal General de Agudos San José (HIGA), donde coordina el consultorio de cannabis medicinal, en funcionamient... <a href="#contacto">seguir leyendo →</a>
+                                </p>
+                                <div class="pc-tags">
+                                    <span class="pc-tag">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+                                        Profesional REPROCANN
+                                    </span>
+                                    <span class="pc-tag">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+                                        Telemedicina
+                                    </span>
+                                    <span class="pc-tag">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+                                        HIGA San José · Pergamino
+                                    </span>
+                                </div>
+                                <div class="pc-actions">
+                                    <a href="#contacto" class="btn-cta">Solicitar turno</a>
+                                    <span class="pc-note">Completando el formulario</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="catalogo" class="catalogo-section">
+            <div class="container">
+                <div class="catalogo-header">
+                    <h1>Catálogo</h1>
+                    <p class="p2 fw-500 catalogo-subtitle">Nuestros principales productos y servicios.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Hero: Aceites Espectro Completo -->
+                    <article class="bento-item bento-hero">
+                        <div class="bento-img-wrap">
+                            <img src="assets/images/foto-aceites.png" alt="Frascos de aceite espectro completo" class="bento-img" loading="lazy" onerror="this.style.display='none';">
+                        </div>
+                        <div class="bento-content">
+
+                            <h3>Aceites Espectro Completo</h3>
+                            <p class="p2">10 variantes estándar: 5 ratios de THC:CBD, en concentraciones Media y Forte.</p>
+
+                        </div>
+                    </article>
+
+                    <!-- Aceites Personalizados -->
+                    <article class="bento-item">
+                        <div class="bento-img-wrap">
+                            <img src="assets/images/foto-personalizados.jpg" alt="Aceite personalizado preparado a medida" class="bento-img" loading="lazy" onerror="this.style.display='none';">
+                        </div>
+                        <div class="bento-content">
+                            <h3>Aceites Personalizados</h3>
+                            <p class="p2">A pedido de profesionales, con ratio y concentración a medida.</p>
+
+                        </div>
+                    </article>
+
+                    <!-- Anexos -->
+                    <article class="bento-item">
+                        <div class="bento-img-wrap">
+                            <img src="assets/images/foto-anexos.png" alt="Ungüentos y tinturas" class="bento-img" loading="lazy" onerror="this.style.display='none';">
+                        </div>
+                        <div class="bento-content">
+                            <h3>Anexos</h3>
+                            <p class="p2">Ungüentos y tinturas complementarias.</p>
+
+                        </div>
+                    </article>
+
+                    <!-- Extracción de Resina -->
+                    <article class="bento-item">
+                        <div class="bento-img-wrap">
+                            <img src="assets/images/foto-resina.jpg" alt="Proceso de extracción de resina" class="bento-img" loading="lazy" onerror="this.style.display='none';">
+                        </div>
+                        <div class="bento-content">
+                            <h3>Extracción de Resina</h3>
+                            <p class="p2">Servicio de extracción de resina.</p>
+
+                        </div>
+                    </article>
+
+                    <!-- Asesoramiento integral en cultivo -->
+                    <article class="bento-item">
+                        <div class="bento-img-wrap">
+                            <img src="assets/images/foto-cultivo.jpg" alt="Asesoramiento en cultivo" class="bento-img" loading="lazy" onerror="this.style.display='none';">
+                        </div>
+                        <div class="bento-content">
+                            <h3>Asesoramiento en Cultivo</h3>
+                            <p class="p2">Acompañamiento profesional para tu cultivo.</p>
+
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- CULTIVADORES SECTION -->
+        <section id="desde-el-origen" class="cultivadores-section">
+            <!-- Geometric Hexagonal Grid Background -->
+            <svg class="cultivadores-bg-svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Concentric Hexagon 1 -->
+                <polygon points="550,400 475,530 325,530 250,400 325,270 475,270" class="hex-line" />
+                <!-- Concentric Hexagon 2 -->
+                <polygon points="680,400 540,643 260,643 120,400 260,157 540,157" class="hex-line" />
+                <!-- Concentric Hexagon 3 -->
+                <polygon points="800,400 600,746 200,746 0,400 200,54 600,54" class="hex-line" />
+                
+                <!-- Nodes (Square dots) -->
+                <!-- Hex 1 Nodes -->
+                <rect x="547" y="397" width="6" height="6" class="hex-node" />
+                <rect x="472" y="527" width="6" height="6" class="hex-node" />
+                <rect x="322" y="527" width="6" height="6" class="hex-node" />
+                <rect x="247" y="397" width="6" height="6" class="hex-node" />
+                <rect x="322" y="267" width="6" height="6" class="hex-node" />
+                <rect x="472" y="267" width="6" height="6" class="hex-node" />
+                
+                <!-- Hex 2 Nodes -->
+                <rect x="677" y="397" width="6" height="6" class="hex-node" />
+                <rect x="537" y="640" width="6" height="6" class="hex-node" />
+                <rect x="257" y="640" width="6" height="6" class="hex-node" />
+                <rect x="117" y="397" width="6" height="6" class="hex-node" />
+                <rect x="257" y="154" width="6" height="6" class="hex-node" />
+                <rect x="537" y="154" width="6" height="6" class="hex-node" />
+
+                <!-- Hex 3 Nodes -->
+                <rect x="797" y="397" width="6" height="6" class="hex-node" />
+                <rect x="597" y="743" width="6" height="6" class="hex-node" />
+                <rect x="197" y="743" width="6" height="6" class="hex-node" />
+                <rect x="-3"  y="397" width="6" height="6" class="hex-node" />
+                <rect x="197" y="51"  width="6" height="6" class="hex-node" />
+                <rect x="597" y="51"  width="6" height="6" class="hex-node" />
+            </svg>
+
+            <div class="container cultivadores-grid">
+                <!-- Contenido Informativo (Izquierda) -->
+                <div class="cultivadores-content">
+                    <span class="cultivadores-eyebrow">CULTIVADORES SOLIDARIOS</span>
+                    <h1 class="cultivadores-title">El círculo se <span>CIERRA</span>.</h1>
+                    <div class="cultivadores-text">
+                        <p>Cultivadores Solidarios nace de una idea simple: que las mismas personas que se forman en <strong>Academia ORIGEN</strong> puedan, con el tiempo, abastecer de materia prima y formulaciones al Consultorio Cannábico del HIGA San José. No se trata de sumar cultivadores externos ni de armar una estructura paralela, sino de que la propia red esté formada por quienes ya pasaron por los talleres.</p>
+                        <p>Quien hoy se sienta a aprender a preparar un aceite, con el tiempo puede convertirse en quien abastece esa misma medicina al espacio que lo formó. Es el círculo cerrándose: de la comunidad hacia el conocimiento, y del conocimiento de vuelta hacia la comunidad, en forma de materia prima y formulaciones.</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta Formulario (Derecha) -->
+                <div class="cultivadores-card">
+                    <h3>¿TE GUSTARÍA SUMARTE?</h3>
+                    <p class="p2 card-subtitle">Contanos por qué te gustaría formar parte de Cultivadores Solidarios. Leemos cada mensaje.</p>
+                    
+                    <form id="form-cultivadores" class="cultivadores-form">
+                        <label for="motivo" class="form-label">TU MOTIVO</label>
+                        <textarea id="motivo" name="motivo" class="form-textarea" placeholder="Por ejemplo: hace un tiempo que cultivo mi propia medicina y me gustaría aportar a la red que me formó..." required></textarea>
+                        
+                        <div class="form-footer">
+                            <p class="p3 footer-text">Tu respuesta llega directo al equipo de ORIGEN. Nos vamos a poner en contacto para contarte los próximos pasos.</p>
+                            <button type="submit" class="btn-primary form-submit-btn">ENVIAR MENSAJE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ SECTION -->
+        <section id="faq" class="placeholder-section"><div class="container"><h1>FAQ</h1></div></section>
+
+        <!-- CONTACTO SECTION -->
+        <section id="contacto" class="placeholder-section"><div class="container"><h1>CONTACTO</h1></div></section>
+
+        <!-- CTA BUTTON — estado inicial / confirmado -->
+        <section class="cta-buttons-section">
+            <div class="container">
+                <button class="btn-cta-turno" id="btn-turno" type="button" aria-label="Enviar datos y agendar turno">
+
+                    <!-- Labels (crossfade durante la animación) -->
+                    <span class="btn-label-initial">Enviar datos y agendar turno</span>
+                    <span class="btn-label-confirmed" aria-hidden="true">Turno agendado</span>
+
+                    <!-- Glyph único que desliza izquierda → derecha -->
+                    <span class="btn-turno-glyph" aria-hidden="true">
+                        <span class="glyph-icon glyph-arrow">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <path d="M6 16L16 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                                <path d="M8 6h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="glyph-icon glyph-check">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <path d="M5 12l4.5 4.5L17 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </span>
+
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
